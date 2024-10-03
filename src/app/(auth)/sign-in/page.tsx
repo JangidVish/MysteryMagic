@@ -92,7 +92,7 @@ function SignIn() {
             </Button>
           </form>
         </Form>
-        <div className="text-center">
+        {/* <div className="text-center">
           <div className="anotherButtons flex flex-col gap-2">
             <span className="text-center">OR</span>
             <Button onClick={() => signIn('google')}>Sign In Using Google</Button>
@@ -102,7 +102,7 @@ function SignIn() {
             Not have an account?{' '}
             <Link href="/sign-up" className="text-blue-600 hover:text-blue-800">Sign up</Link>
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

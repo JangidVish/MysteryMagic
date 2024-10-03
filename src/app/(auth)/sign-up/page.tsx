@@ -1,5 +1,5 @@
 'use client';
-
+import React from 'react';
 import { ApiResponse } from '@/types/apiRespones';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Link from 'next/link';
@@ -42,7 +42,6 @@ export default function SignUpForm() {
   });
 
 
- 
   // Define the debounce callback function
   const checkUniqueUsername = useCallback(async (username: string) => {
     if (username) {
@@ -169,16 +168,21 @@ export default function SignUpForm() {
                 </FormItem>
               )}
             />
-            <Button type="submit" className='w-full' disabled={isSubmitting}>
-              {isSubmitting ? (
-                <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Please wait
-                </>
-              ) : (
-                'Sign Up'
-              )}
-            </Button>
+           <Button
+  type="submit"
+  className={`w-full ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+  disabled={isSubmitting}
+>
+  {isSubmitting ? (
+    <>
+      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+      Please wait
+    </>
+  ) : (
+    'Sign Up'
+  )}
+</Button>
+
           </form>
         </Form>
         <div className="text-center mt-4">
