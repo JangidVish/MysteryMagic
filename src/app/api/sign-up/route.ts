@@ -2,7 +2,7 @@ import { sendVerificationEmail } from "@/helpers/sendVerificationEmails";
 import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/model/User.model";
 import bcryptjs from 'bcryptjs'
-import { User } from "lucide";
+// import { User } from "lucide";
 
 
 
